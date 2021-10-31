@@ -1,0 +1,14 @@
+<h1>Desigual Shop</h1>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <% { "Clothers" => clothers_path,
+       "Categories" => categories_path,
+       "Genders" => genders_path,
+       "Nominals" => nominals_path,
+       "Trends" => trends_path
+     }
+     .each { |key, value| %>
+    <li class="nav-item">
+      <%= link_to key, value %>
+    </li>
+  <% } %>
+</nav>

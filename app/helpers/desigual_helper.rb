@@ -1,0 +1,2 @@
+module DesigualHelper
+end

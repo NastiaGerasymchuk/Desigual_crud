@@ -10,11 +10,9 @@ class ClothersController < ApplicationController
 
   def create
     @clother = Clother.new(params.require(:clother).permit(:price, :description, :image, :trend_id, :nominal_id, :gender_id, :category_id))
-    #@clother.image.attach(post_params[:image])
     @clother.save
     redirect_to @clother, notice: :"Successfully checked in"
-    # redirect_to @clother
-    # redirect_to action: "show", id: 12
+
   end
 
   def new

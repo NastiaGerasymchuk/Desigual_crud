@@ -18,7 +18,17 @@
       </p>
       <p>
         <strong>Image</strong>
-        <img src="<%=(url_for(clother.image))%>" class="clother-image"/>
+        <strong>Image:</strong>
+        <% if clother.image.nil? %>
+          <span>Image is empty</span>
+        <%else %>
+          <%= image_tag(clother.image) %>
+          <!--        <img src="<%#=(url_for(@clother.image))%>" class="clother-image"/>-->
+
+        <%end %>
+      </p>
+
+<!--        <img src="<%#=(url_for(clother.image))%>" class="clother-image"/>-->
       </p>
       <p>
         <strong>Trend</strong>

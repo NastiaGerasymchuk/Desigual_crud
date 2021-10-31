@@ -11,9 +11,13 @@
 <!--    <%#= form.label :image %><br>-->
     <%#=  form.text_field :image%>
 <!--  </p>-->
+<!--  <p>-->
+<!--    <%#= form.label :image %><br>-->
+    <%#=  form.file_field :image,accept: 'image/png,image/gif,image/jpeg'%>
+<!--  </p>-->
   <p>
     <%= form.label :image %><br>
-    <%=  form.file_field :image,accept: 'image/png,image/gif,image/jpeg'%>
+    <%=  form.file_field :image %>
   </p>
   <p>
     <%= form.label :trend_id %><br>

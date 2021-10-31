@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :nominals
   resources :trends
   resources :clothers
+  root to: 'clothers#index'
 end

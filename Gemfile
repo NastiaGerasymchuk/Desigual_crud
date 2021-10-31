@@ -60,7 +60,11 @@ group :development do
 
   # Use sqlite3 as the database for Active Record
 
-  gem 'sqlite3', '~> 1.4'
+  #  gem 'sqlite3', '~> 1.4'
+  group :development, :test do
+    gem 'sqlite3'
+  end
+  gem 'pg', group: :production
   gem 'web-console', '>= 4.1.0'
 
     gem 'listen', '>= 3.0.5', '< 3.2'

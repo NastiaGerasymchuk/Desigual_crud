@@ -1,0 +1,56 @@
+<div>
+  <h1>Clothers</h1>
+  <p>Clothers count: <%=Clother.count_by_sql("select count(*) from clothers") %></p>
+  <% @clothers.each { |clother| %>
+    <div>
+      <h>Clother</h>
+      <p>
+        <strong>Description:</strong>
+        <%= clother.description %>
+      </p>
+      <p>
+        <strong>Price</strong>
+        <% if clother.price.nil? %>
+
+        <%else %>
+          <%= clother.price %>
+          <%end %>
+      </p>
+      <p>
+        <strong>Image</strong>
+        <img src="<%=(url_for(clother.image))%>" class="clother-image"/>
+      </p>
+      <p>
+        <strong>Trend</strong>
+        <% if clother.trend.nil? %>
+
+        <%else %>
+          <%= clother.trend.name %>
+        <%end %>
+      </p>
+      <p>
+        <strong>Gender</strong>
+        <% if clother.gender.nil? %>
+
+        <%else %>
+          <%= clother.gender.name %>
+        <%end %>
+      </p>
+      <p>
+        <strong>Category</strong>
+        <% if clother.category.nil? %>
+
+        <%else %>
+          <%= clother.category.name %>
+        <%end %>
+      </p>
+    <p>
+      <%= link_to 'Show', clother_path(clother) %>
+      <%= link_to 'Edit', edit_clother_path(clother) %>
+      <%= button_to 'Destroy', clother, method: :delete, :onclick => "return confirm('Are you sure you want to delete this clother?')" %>
+    </p>
+  <% } %>
+          </div>
+
+</div>
+

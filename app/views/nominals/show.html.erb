@@ -1,0 +1,9 @@
+<div>
+  <%if @nominal.nil? %>
+  <strong>Nominal not found</strong>
+    <%else %>
+    <p>Nominal</p>
+    <strong>Name:</strong>
+    <%=@nominal.name %>
+  <%end %>
+</div>

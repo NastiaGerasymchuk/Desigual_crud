@@ -1,0 +1,10 @@
+<div>
+  <% if @category.nil?%>
+    <div>Category not found</div>
+    <% else %>
+  <h1>Category</h1>
+  <strong>Name</strong>
+  <%= @category.name %>
+    <% end %>
+</div>
+

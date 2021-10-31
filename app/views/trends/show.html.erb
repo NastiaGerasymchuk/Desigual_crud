@@ -1,0 +1,9 @@
+<div>
+  <%if @trend.nil? %>
+  <strong>Trend not found</strong>
+  <%else %>
+    <h>Trend</h>
+    <strong>Name:</strong>
+    <%= @trend.name %>
+  <%end %>
+</div>

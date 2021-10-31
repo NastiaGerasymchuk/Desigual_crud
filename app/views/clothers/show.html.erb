@@ -1,0 +1,60 @@
+<% if @clother.nil? # or whatever method you use to determine
+
+%>
+  <strong>Your Clother not exist</strong>
+<% else %>
+  <div>
+    <h>Clother</h>
+    <p>
+      <strong>Description:</strong>
+      <% if @clother.description.nil? %>
+      <span>Description is empty</span>
+        <%else %>
+        <%= @clother.description %>
+      <%end %>
+
+    </p>
+    <p>
+      <strong>Price:</strong>
+      <% if @clother.price.nil? %>
+        <span>price is empty</span>
+      <%else %>
+        <%= @clother.price %>
+      <%end %>
+    </p>
+    <p>
+      <strong>Image:</strong>
+      <% if @clother.image.nil? %>
+        <span>Image is empty</span>
+      <%else %>
+        <img src="<%=(url_for(@clother.image))%>" class="clother-image"/>
+
+      <%end %>
+    </p>
+    <p>
+      <strong>Trend:</strong>
+      <% if @clother.trend.nil? %>
+        <span>Trend is empty</span>
+      <%else %>
+        <%= @clother.trend.name %>
+      <%end %>
+    </p>
+    <p>
+      <strong>Gender</strong>
+      <% if @clother.gender.nil? %>
+        <span>Gender is empty</span>
+      <%else %>
+        <%= @clother.gender.name %>
+      <%end %>
+    </p>
+    <p>
+      <strong>Category</strong>
+      <% if @clother.category.nil? %>
+        <span>Category is empty</span>
+      <%else %>
+        <%= @clother.category.name %>
+      <%end %>
+    </p>
+
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<!--<div>-->
+<!--  <h1>Genders</h1>-->
+  <%# @genders.each { |gender| %>
+<!--    <div>-->
+<!--      <strong>Name</strong>-->
+      <%#=  gender.name  %>
+<!--    </div>-->
+  <%# } %>
+<!--</div>-->
+<!DOCTYPE html>
+<html>
+<body>
+<div class="container">
+  <h3>GENDERS LIST</h3>
+  <p>Genders count: <%=Gender.count_by_sql("select count(*) from genders") %></p>
+  <div>
+    <%= link_to 'Add Gender', new_gender_path %>
+  </div>
+  <br>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @genders.each do |gender| %>
+      <tr>
+        <td><%= gender.name %></td>
+        <div>
+          <td>
+            <%= link_to 'Show', gender_path(gender) %>
+            <%= link_to 'Edit', edit_gender_path(gender) %>
+            <%= button_to 'Destroy', gender, method: :delete, :onclick => "return confirm('Are you sure you want to delete this gender?')" %>
+            <%#= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %>
+            <%#= link_to 'Destroy', genders_delete_path(product), confirm: 'Are you sure?', method: :delete %>
+        </div>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

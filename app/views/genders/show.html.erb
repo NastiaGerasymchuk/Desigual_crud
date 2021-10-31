@@ -1,0 +1,11 @@
+<div>
+  <% if @gender.persisted? %>
+  <strong>Gender not found</strong>
+    <%else %>
+    <p>Gender</p>
+    <strong>Name</strong>
+    <%=@gender.name %>
+  <%end %>
+  <%= link_to 'Go to all genders', genders_url%>
+
+</div>

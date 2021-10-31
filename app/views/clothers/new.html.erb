@@ -1,0 +1,37 @@
+<%= form_with scope: :clother, url: clothers_path,local: true do |form| %>
+  <p>
+    <%= form.label :description %><br>
+    <%=  form.text_field :description%>
+  </p>
+  <p>
+    <%= form.label :price %><br>
+    <%= form.number_field :price, in: 1.0..2000.0, step: 0.5 %>
+  </p>
+<!--  <p>-->
+<!--    <%#= form.label :image %><br>-->
+    <%#=  form.text_field :image%>
+<!--  </p>-->
+  <p>
+    <%= form.label :image %><br>
+    <%=  form.file_field :image,accept: 'image/png,image/gif,image/jpeg'%>
+  </p>
+  <p>
+    <%= form.label :trend_id %><br>
+    <%= form.collection_select :trend_id, Trend.order(:name), :id, :name %>
+  </p>
+  <p>
+    <%= form.label :nominal_id %><br>
+    <%= form.collection_select :nominal_id, Nominal.order(:name), :id, :name %>
+  </p>
+  <p>
+    <%= form.label :gender_id %><br>
+    <%= form.collection_select :gender_id, Gender.order(:name), :id, :name %>
+  </p>
+  <p>
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
+  </p>
+  <p>
+    <%=form.submit %>
+  </p>
+<% end %>

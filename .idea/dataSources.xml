@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="desigual_shop" uuid="1b7e33b0-163d-488d-af90-4e0a1abd8f12">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="development" uuid="bb0e68ce-6b4a-4092-add1-cd1d45fac0de">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Admin\RubymineProjects\DesigualShop\db\development.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="identifier" uuid="1c07c423-1a61-47fd-9f5c-f14863b05e73">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Admin\RubymineProjects\DesigualShop\identifier.sqlite</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="User Data Source" uuid="89032d7c-0145-41a4-8f9f-e29dd1c5e908">
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>java.sql.Driver</jdbc-driver>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="desigual" uuid="8776f0b5-4127-4d98-a3ee-ca9ad82e302f">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>https://desigual.herokuapp.com/</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="postgres@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com" uuid="df9dc844-f8b9-45e1-9ee0-e3f09fa23ae8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/d4pdr3o3fu0c4c</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="User Data Source [2]" uuid="03482ad8-20e7-467c-819f-eb9dd549c548">
+      <driver-ref>e2e608a8-053e-4179-ae8c-7581c5cc2d92</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>java.sql.Driver</jdbc-driver>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="Rails DesigualShop: development" uuid="ba72939d-f043-4a4d-b2c8-47c8746087cb">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Admin\RubymineProjects\DesigualShop\db\development.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="SQLite" uuid="bccf55c7-9a87-47f2-9a5b-e780fc56c5e0">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/#DataSourceSettings# #LocalDataSource: postgres@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com #BEGIN# &lt;data-source source=&quot;LOCAL&quot; name=&quot;postgres@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com&quot; uuid=&quot;df9dc844-f8b9-45e1-9ee0-e3f09fa23ae8&quot;&gt;&lt;database-info product=&quot;PostgreSQL&quot; version=&quot;13.4 (Ubuntu 13.4-4.pgdg20.04+1)&quot; jdbc-version=&quot;4.2&quot; driver-name=&quot;PostgreSQL JDBC Driver&quot; driver-version=&quot;42.2.22&quot; dbms=&quot;POSTGRES&quot; exact-version=&quot;13.4&quot; exact-driver-version=&quot;42.2&quot;&gt;&lt;identifier-quote-string&gt;&amp;quot;&lt;/identifier-quote-string&gt;&lt;/database-info&gt;&lt;case-sensitivity plain-identifiers=&quot;lower&quot; quoted-identifiers=&quot;exact&quot;/&gt;&lt;driver-ref&gt;postgresql&lt;/driver-ref&gt;&lt;synchronize&gt;true&lt;/synchronize&gt;&lt;jdbc-driver&gt;org.postgresql.Driver&lt;/jdbc-driver&gt;&lt;jdbc-url&gt;jdbc:postgresql://ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/d4pdr3o3fu0c4c&lt;/jdbc-url&gt;&lt;secret-storage&gt;master_key&lt;/secret-storage&gt;&lt;user-name&gt;atxpjcztgiuvfg&lt;/user-name&gt;&lt;schema-mapping&gt;&lt;introspection-scope&gt;&lt;node kind=&quot;database&quot; qname=&quot;@&quot;&gt;&lt;node kind=&quot;schema&quot; qname=&quot;@&quot;/&gt;&lt;/node&gt;&lt;/introspection-scope&gt;&lt;/schema-mapping&gt;&lt;working-dir&gt;$ProjectFileDir$&lt;/working-dir&gt;&lt;/data-source&gt; #END#</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="Apache Derby (Embedded)" uuid="725e7da8-2bc2-4345-b550-41fceb0198d0">
+      <driver-ref>derby.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby:$PROJECT_DIR$/#DataSourceSettings# #LocalDataSource: postgres@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com #BEGIN# &lt;data-source source=&quot;LOCAL&quot; name=&quot;postgres@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com&quot; uuid=&quot;df9dc844-f8b9-45e1-9ee0-e3f09fa23ae8&quot;&gt;&lt;database-info product=&quot;PostgreSQL&quot; version=&quot;13.4 (Ubuntu 13.4-4.pgdg20.04+1)&quot; jdbc-version=&quot;4.2&quot; driver-name=&quot;PostgreSQL JDBC Driver&quot; driver-version=&quot;42.2.22&quot; dbms=&quot;POSTGRES&quot; exact-version=&quot;13.4&quot; exact-driver-version=&quot;42.2&quot;&gt;&lt;identifier-quote-string&gt;&amp;quot;&lt;/identifier-quote-string&gt;&lt;/database-info&gt;&lt;case-sensitivity plain-identifiers=&quot;lower&quot; quoted-identifiers=&quot;exact&quot;/&gt;&lt;driver-ref&gt;postgresql&lt;/driver-ref&gt;&lt;synchronize&gt;true&lt;/synchronize&gt;&lt;jdbc-driver&gt;org.postgresql.Driver&lt;/jdbc-driver&gt;&lt;jdbc-url&gt;jdbc:postgresql://ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/d4pdr3o3fu0c4c&lt;/jdbc-url&gt;&lt;secret-storage&gt;master_key&lt;/secret-storage&gt;&lt;user-name&gt;atxpjcztgiuvfg&lt;/user-name&gt;&lt;schema-mapping&gt;&lt;introspection-scope&gt;&lt;node kind=&quot;database&quot; qname=&quot;@&quot;&gt;&lt;node kind=&quot;schema&quot; qname=&quot;@&quot;/&gt;&lt;/node&gt;&lt;/introspection-scope&gt;&lt;/schema-mapping&gt;&lt;working-dir&gt;$ProjectFileDir$&lt;/working-dir&gt;&lt;/data-source&gt; #END#</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="User Data Source [3]" uuid="dc2ec4a2-cd30-40ae-95bb-169aa18df979">
+      <driver-ref>034d5e34-d3d5-49b9-8e99-1261635cb682</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>java.sql.Driver</jdbc-driver>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="User Data Source [4]" uuid="21263ad1-bd3c-46b6-97b6-be1cd415058a">
+      <driver-ref>a2c35f80-3352-40b4-a9aa-a68abac972ac</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>java.sql.Driver</jdbc-driver>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - postgres@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com" uuid="957c6133-05c1-4987-a037-5a878e88976e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/postgres</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

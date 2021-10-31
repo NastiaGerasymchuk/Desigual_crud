@@ -1,7 +1,8 @@
 <%= form_with scope: :clother, url: clothers_path,local: true do |form| %>
   <p>
     <%= form.label :description %><br>
-    <%=  form.text_field :description%>
+    <%= form.text_area :description,class: 'form-control clo-textarea', :cols => 30, :rows => 10 %>
+
   </p>
   <p>
     <%= form.label :price %><br>

@@ -1,0 +1,15 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.clo-textarea {
+  border: 1px solid #ff00ae;
+  background: #d4e8ec;
+  color: red;
+}
+.btn-crud{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}

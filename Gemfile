@@ -30,8 +30,11 @@ gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootstrap', '~> 4.4.1'
-gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'bootsnap', '>= 1.4.4', require: false
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 

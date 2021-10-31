@@ -1,3 +1,20 @@
 .clother-image{
-    width: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    border: 1px solid red;
+}
+.clother-textarea{
+    border: 1px solid #ff00ae;
+    background: #d4e8ec;
+}
+.btn-crud{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    border: 1px solid red;
 }

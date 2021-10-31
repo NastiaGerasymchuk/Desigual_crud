@@ -1,8 +1,9 @@
-<div>
-  <h1>Clothers</h1>
-  <p>Clothers count: <%=Clother.count_by_sql("select count(*) from clothers") %></p>
+<div class="title-container">
+  <h1 style="color:blueviolet; font-weight: bold">Clothers</h1>
+  <p><%= link_to "New Clother",new_clother_path, class: 'btn btn-blue' %></p>
+  <p>Clothers count: <span style="color: red"><%=Clother.count_by_sql("select count(*) from clothers") %></span></p>
   <% @clothers.each { |clother| %>
-    <div>
+   <div style="border: 2px solid #5d3379; margin: 10px; padding: 5px">
       <h>Clother</h>
       <p>
         <strong>Description:</strong>
@@ -18,11 +19,12 @@
       </p>
       <p>
         <strong>Image</strong>
-        <strong>Image:</strong>
         <% if clother.image.nil? %>
           <span>Image is empty</span>
+
         <%else %>
-          <%= image_tag(clother.image) %>
+          <p style="width: 50px"><%#= image_tag(clother.image) %></p>
+          <%#= image_tag(clother.image) %>
           <!--        <img src="<%#=(url_for(@clother.image))%>" class="clother-image"/>-->
 
         <%end %>
@@ -54,13 +56,16 @@
           <%= clother.category.name %>
         <%end %>
       </p>
-    <p>
-      <%= link_to 'Show', clother_path(clother) %>
-      <%= link_to 'Edit', edit_clother_path(clother) %>
+    <p></p>
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; align-content: center" >
+      <%= link_to 'Show', clother_path(clother), class: 'btn btn-default'  %>
+      <p style="margin: auto 10px"><%= link_to 'Edit', edit_clother_path(clother) %></p>
       <%= button_to 'Destroy', clother, method: :delete, :onclick => "return confirm('Are you sure you want to delete this clother?')" %>
-    </p>
+    </div>
+   </div>
   <% } %>
-          </div>
+
+</div>
 
 </div>
 

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'desigual/index'
   resources :categories
   resources :genders
   resources :nominals

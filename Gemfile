@@ -11,6 +11,7 @@ gem 'rails', '~> 7.0.0.alpha2'
 gem 'puma', '~> 5.0'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'importmap-rails', '>= 0.3.4'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
@@ -31,10 +32,10 @@ gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootstrap', '~> 4.4.1'
 
-gem 'bootsnap', '>= 1.4.4', require: false
-gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
+gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -68,9 +69,9 @@ group :development do
 
     gem 'listen', '>= 3.0.5', '< 3.2'
     # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+    gem 'rb-readline'
     gem 'spring'
     gem 'spring-watcher-listen', '~> 2.0.0'
-    gem 'rb-readline'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler", ">= 2.3.3"
 

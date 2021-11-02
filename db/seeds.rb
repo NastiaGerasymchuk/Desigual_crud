@@ -16,6 +16,7 @@
   Category.create(
     name: Faker::Name.unique.name
   )
+
 end
 100.times do
   Gender.create(

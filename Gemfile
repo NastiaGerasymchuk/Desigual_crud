@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'aws-sdk-s3'
+gem "paperclip", "~> 4.1.1"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 

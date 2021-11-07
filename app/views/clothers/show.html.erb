@@ -24,10 +24,11 @@
     </p>
     <p>
       <strong>Image:</strong>
-      <% if image_tag(@clother.image).nil? %>
-        <span>Image is empty</span>
+      <% if @clother.image.attached? %>
+          <%= image_tag url_for(@clother.image) %>
+
       <%else %>
-        <%= image_tag(@clother.image) %>
+        <span>Image is empty</span>
         <%#=@clother.image %>
 <!--        <img src="<%#=(url_for(@clother.image))%>" class="clother-image"/>-->
 

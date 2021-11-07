@@ -20,7 +20,7 @@
       <p>
         <strong>Image</strong>
         <% if clother.image.attached? %>
-          <%= image_tag url_for(clother.image) %>
+          <%=   image_tag url_for(clother.image), :class =>  'clother-image' %>
 
         <%else %>
 
@@ -66,7 +66,15 @@
    </div>
   <% } %>
 
+  <div>
+    <% if @page-1>=0 %>
+    <%= link_to "Previous Page", clothers_path(page: @page-1) %>
+    |
+    <%end %>
+    <%= link_to "Next Page", clothers_path(page: @page+1) %>
+  </div>
 </div>
+
 
 </div>
 

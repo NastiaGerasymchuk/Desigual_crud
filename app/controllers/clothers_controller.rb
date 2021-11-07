@@ -1,4 +1,5 @@
 class ClothersController < ApplicationController
+  CLOTHER_PER_PAGE=3
   def show
     @clother = Clother.find_by_id(params[:id])
     respond_to do |format|
@@ -19,7 +20,8 @@ class ClothersController < ApplicationController
   def new
   end
   def index
-    @clothers = Clother.all.order('price DESC', 'created_at')
+    @page=params.fetch(:page, 0).to_i
+    @clothers = Clother.offset(@page*CLOTHER_PER_PAGE).all.order('price DESC', 'created_at').limit(CLOTHER_PER_PAGE)
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render xml: @clothers}

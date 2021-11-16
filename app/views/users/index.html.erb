@@ -24,7 +24,7 @@
   <input type="password" name="user[password]" placeholder="password">
   <input type="submit" name="submit" class="submit">
 </form>
-<%=link_to "Send private message", "https://api.telegram.org/bot2105912353:AAF1UVZbaWDHIrJm3fcMg0TKYDA_n4674pU/sendMessage?chat_id=612782284&text=DIRECT", target: "_blank"%>
-<%=link_to "Send group message", "https://api.telegram.org/bot2105912353:AAF1UVZbaWDHIrJm3fcMg0TKYDA_n4674pU/sendMessage?chat_id=-778328908&text=GROUP"%>
+<%= button_to "Send group message via controller", home_group_message_path, method: :post %>
+<%= button_to "Send private message via controller", home_private_message_path, method: :post %>
 </body>
 </html>

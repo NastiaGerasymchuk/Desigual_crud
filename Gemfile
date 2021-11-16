@@ -19,6 +19,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'importmap-rails', '>= 0.3.4'
+gem 'httparty'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails', '>= 0.7.11'

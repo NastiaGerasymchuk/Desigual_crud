@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_17_210545) do
+ActiveRecord::Schema.define(version: 2021_11_10_205648) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -70,11 +70,19 @@ ActiveRecord::Schema.define(version: 2021_10_17_210545) do
     t.datetime "updated_at", precision: 6
   end
 
+  create_table "sessions", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "trends", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6
     t.datetime "updated_at", precision: 6
   end
+
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'string' for column 'password_digest'
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"

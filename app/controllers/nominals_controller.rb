@@ -13,7 +13,7 @@ class NominalsController < ApplicationController
   end
 
   def index
-    @nominals = Gender.all
+    @nominals = Nominal.all
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render xml: @nominals}

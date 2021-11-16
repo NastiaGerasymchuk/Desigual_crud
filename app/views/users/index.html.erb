@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1>Login</h1>
+<form action="/sessions" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <input type="email" name="login[email]" placeholder="email">
+  <input type="password" name="login[password]" placeholder="password">
+  <input type="submit" name="submit" class="submit">
+</form>
+<h1>
+  Registration
+</h1>
+<form action="/users" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <input type="name" name="user[name]" placeholder="name">
+  <input type="email" name="user[email]" placeholder="email">
+  <input type="password" name="user[password]" placeholder="password">
+  <input type="submit" name="submit" class="submit">
+</form>
+<%=link_to "Send private message", "https://api.telegram.org/bot2105912353:AAF1UVZbaWDHIrJm3fcMg0TKYDA_n4674pU/sendMessage?chat_id=612782284&text=DIRECT", target: "_blank"%>
+<%=link_to "Send group message", "https://api.telegram.org/bot2105912353:AAF1UVZbaWDHIrJm3fcMg0TKYDA_n4674pU/sendMessage?chat_id=-778328908&text=GROUP"%>
+</body>
+</html>

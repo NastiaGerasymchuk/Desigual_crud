@@ -4,17 +4,17 @@ class HomeController < ApplicationController
   def index
   end
   def group_message
-    api_key=TELEGRAM
-    chat_id=-778328908
-    text='GROUP DATA'
-    HTTParty.post("https://api.telegram.org/bot#{api_key}/sendMessage",
-     headers:{
-       'Content-Type'=>'application/json'
-   },
-    body:{
-    chat_id:chat_id,
-    text:text
-    }.to_json)
+   #  api_key=TELEGRAM
+   #  chat_id=-778328908
+   #  text='GROUP DATA'
+   #  HTTParty.post("https://api.telegram.org/bot#{api_key}/sendMessage",
+   #   headers:{
+   #     'Content-Type'=>'application/json'
+   # },
+   #  body:{
+   #  chat_id:chat_id,
+   #  text:text
+   #  }.to_json)
     redirect_to '/dashboard', notice: "group success"
   end
   def private_message

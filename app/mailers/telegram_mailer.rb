@@ -12,4 +12,16 @@ class TelegramMailer < ApplicationMailer
                     text:text
                   }.to_json)
   end
+
+  def send_private_message(text,user)
+    api_key=TELEGRAM
+    HTTParty.post("https://api.telegram.org/bot#{api_key}/sendMessage",
+                  headers:{
+                    'Content-Type'=>'application/json'
+                  },
+                  body:{
+                    chat_id:user,
+                    text:text
+                  }.to_json)
+  end
 end

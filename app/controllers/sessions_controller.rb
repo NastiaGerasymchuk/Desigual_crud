@@ -13,6 +13,12 @@ class SessionsController < ApplicationController
     # end
   end
 
+  def destroy
+    session[:user_id]=nil
+    session[:username]=nil
+    redirect_to '/', notice: "successful logged from telegram"
+  end
+
   private
 
   def login_params

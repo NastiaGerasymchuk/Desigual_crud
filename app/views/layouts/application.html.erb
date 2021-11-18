@@ -26,6 +26,9 @@
     <% session[:username] %>
     <%= link_to "Home",'/' %>
     <%= link_to "Posts",posts_path %>
+    <% if session[:user_id].present? %>
+    <%= button_to "Logout",sessions_destroy_path, method: :delete %>
+    <% end %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %>
     <%= javascript_include_tag 'https://cdn.datatables.net/s/dt/dt-1.10.10,r-2.0.0/datatables.min.js' %>

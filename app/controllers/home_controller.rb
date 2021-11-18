@@ -24,4 +24,9 @@ class HomeController < ApplicationController
     HTTParty.post("https://api.telegram.org/bot#{api_key}/sendMessage?chat_id=#{chat_id}&text=#{text}")
     redirect_to '/dashboard', notice: "private success"
   end
+  def send_hello
+    text = params[:content]
+    TelegramMailer.send_group_message(text).deliver_now
+    redirect_to '/'
+  end
 end

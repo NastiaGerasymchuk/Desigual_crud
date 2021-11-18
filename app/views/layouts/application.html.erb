@@ -22,6 +22,8 @@
     </div>
     <%= notice %>
     <%= TELEGRAM %>
+    <% session[:user_id] %>
+    <% session[:username] %>
     <%= link_to "Home",'/' %>
     <%= link_to "Posts",posts_path %>
     <%= javascript_include_tag "application" %>

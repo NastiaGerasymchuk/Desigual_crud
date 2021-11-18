@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h1>Posts</h1>
-<% @post.each { |post| %>
+<% @posts.each { |post| %>
   <div>
     <strong>Title</strong>
     <%=  post.title  %>
@@ -11,6 +11,6 @@
   </div>
 <% } %>
 <%= link_to "New post", new_post_path %>
-</div>
+
 
 

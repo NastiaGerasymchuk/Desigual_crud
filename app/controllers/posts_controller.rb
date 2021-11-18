@@ -3,11 +3,11 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @post = Post.all.order('title', 'created_at')
+    @posts = Post.all.order('title', 'created_at')
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render xml: @post}
-      format.json { render json: @post}
+      format.xml  { render xml: @posts}
+      format.json { render json: @posts}
     end
 
   end

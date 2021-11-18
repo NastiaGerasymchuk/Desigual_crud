@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   resources :desigual
   # root to: 'desigual#index'
   get '/' => 'users#index'
-  post '/sessions' => 'sessions#create'
+  # post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
   get '/dashboard' => 'clothers#index'
   post "home/group_message", to: "home#group_message"
   post "home/private_message", to: "home#private_message"
   post "home/send_hello", to: "home#send_hello", as: "send_hello"
-  get "telegram_sessions/create", to: "sessions#create"
+  get "sessions/create", to: "sessions#create"
 
 end

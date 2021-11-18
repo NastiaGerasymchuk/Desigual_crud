@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :desigual
   # root to: 'desigual#index'
   get '/' => 'users#index'
+  get '/posts'=>'posts#index'
   # post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
   get '/dashboard' => 'clothers#index'

@@ -12,6 +12,10 @@ class ClothersController < ApplicationController
   def create
     @clother = Clother.new(params.require(:clother).permit(:price, :description, :image, :trend_id, :nominal_id, :gender_id, :category_id))
     @clother.save
+    text="clother created"
+    TelegramMailer.send_group_message(text).deliver_now
+    user=session[:user_id]
+    TelegramMailer.send_private_message(text,user).deliver_now
     redirect_to @clother, notice: :"Successfully checked in"
 
   end
@@ -40,7 +44,11 @@ class ClothersController < ApplicationController
       @clother.update_attribute(:nominal_id, params[:clother][:nominal_id])&&
       @clother.update_attribute(:gender_id, params[:clother][:gender_id])&&
       @clother.update_attribute(:category_id, params[:clother][:category_id])
-      flash[:notice] = 'Clother updated!'
+      flash[:notice] = 'Clother updated!';
+      text="clother updated"
+      TelegramMailer.send_group_message(text).deliver_now
+      user=session[:user_id]
+      TelegramMailer.send_private_message(text,user).deliver_now
       redirect_to @clother
     else
       flash[:error] = 'Failed to edit clother!'
@@ -51,6 +59,10 @@ class ClothersController < ApplicationController
     @clother = Clother.find(params[:id])
     @clother.destroy
     params[:id] = nil
+    text="clother deleted"
+    TelegramMailer.send_group_message(text).deliver_now
+    user=session[:user_id]
+    TelegramMailer.send_private_message(text,user).deliver_now
     flash[:notice] = 'Clother has been deleted'
     redirect_to action: :index
   end

@@ -1,61 +1,61 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--  <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--  <title>Document</title>-->
+<!--</head>-->
 <body>
-<h1>Login</h1>
-<form action="/sessions" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
-  <input type="email" name="login[email]" placeholder="email">
-  <input type="password" name="login[password]" placeholder="password">
-  <input type="submit" name="submit" class="submit">
-</form>
-<h1>
-  Registration
-</h1>
-<form action="/users" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
-  <input type="name" name="user[name]" placeholder="name">
-  <input type="email" name="user[email]" placeholder="email">
-  <input type="password" name="user[password]" placeholder="password">
-  <input type="submit" name="submit" class="submit">
-</form>
-<%= button_to "Send group message via controller", home_group_message_path, method: :post %>
-<%= button_to "Send private message via controller", home_private_message_path, method: :post %>
+<!--<h1>Login</h1>-->
+<!--<form action="/sessions" method="POST">-->
+<!--  <input type="hidden" name="authenticity_token" value="<%#=form_authenticity_token%>">-->
+<!--  <input type="email" name="login[email]" placeholder="email">-->
+<!--  <input type="password" name="login[password]" placeholder="password">-->
+<!--  <input type="submit" name="submit" class="submit">-->
+<!--</form>-->
+<!--<h1>-->
+<!--  Registration-->
+<!--</h1>-->
+<!--<form action="/users" method="POST">-->
+<!--  <input type="hidden" name="authenticity_token" value="<%#=form_authenticity_token%>">-->
+<!--  <input type="name" name="user[name]" placeholder="name">-->
+<!--  <input type="email" name="user[email]" placeholder="email">-->
+<!--  <input type="password" name="user[password]" placeholder="password">-->
+<!--  <input type="submit" name="submit" class="submit">-->
+<!--</form>-->
+<%#= button_to "Send group message via controller", home_group_message_path, method: :post %>
+<%#= button_to "Send private message via controller", home_private_message_path, method: :post %>
 <%= form_tag send_hello_path,method: :post do %>
 <%= text_field_tag :content, nil, required:true%>
   <br/>
-<%= submit_tag "say hello" %>
-<% end %>  %>
+<%= submit_tag "send support list" %>
+<% end %>
 <hr/>
 <% if session[:user_id].nil?%>
 <script async
         src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="desigual_shop_bot" data-size="large" data-auth-url="https://evil-goosebumps-40873.herokuapp.com/sessions/create" data-request-access="write"></script>
 <% end %>
 </body>
-<hr/>
-<%=params[:id] %>
-<br/>
-<%=params[:first_name] %>
-<br/>
-<%=params[:last_name] %>
-<br/>
-<%=params[:username] %>
-<br/>
-<%=params[:photo_url] %>
-<br/>
-<%=params[:auth_date] %>
-<br/>
-<%=params[:hash] %>
-</html>
-?id=612782284&
-first_name=Nastia&
-last_name=Gerasymchuk&
-username=gerasymchuk888&
-photo_url=https%3A%2F%2Ft.me%2Fi%2Fuserpic%2F320%2F21U4e4Z85IC6LlUFSgUUT_Yh26nsOfcrYwVBrFbMk7o.jpg&
-auth_date=1637264227&
-hash=819dbf7ead82f515eb3f0a5cefc5574d6df85605367731bdc55f741556e0db2a
+<!--<hr/>-->
+<%#=params[:id] %>
+<!--<br/>-->
+<%#=params[:first_name] %>
+<!--<br/>-->
+<%#=params[:last_name] %>
+<!--<br/>-->
+<%#=params[:username] %>
+<!--<br/>-->
+<%#=params[:photo_url] %>
+<!--<br/>-->
+<%#=params[:auth_date] %>
+<!--<br/>-->
+<%#=params[:hash] %>
+<!--</html>-->
+<!--?id=612782284&-->
+<!--first_name=Nastia&-->
+<!--last_name=Gerasymchuk&-->
+<!--username=gerasymchuk888&-->
+<!--photo_url=https%3A%2F%2Ft.me%2Fi%2Fuserpic%2F320%2F21U4e4Z85IC6LlUFSgUUT_Yh26nsOfcrYwVBrFbMk7o.jpg&-->
+<!--auth_date=1637264227&-->
+<!--hash=819dbf7ead82f515eb3f0a5cefc5574d6df85605367731bdc55f741556e0db2a-->

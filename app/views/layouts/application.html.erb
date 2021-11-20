@@ -24,10 +24,10 @@
     <%= TELEGRAM %>
     <% session[:user_id] %>
     <% session[:username] %>
-    <%= link_to "Home",'/' %>
+    <%#= link_to "Home",'/desigual' %>
     <%= link_to "Posts",'/posts' %>
     <% if session[:user_id].present? %>
-    <%= button_to "Logout",sessions_destroy_path, method: :delete %>
+    <%#= button_to "Logout",sessions_destroy_path, method: :delete %>
     <% end %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %>

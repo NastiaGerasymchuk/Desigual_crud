@@ -3,14 +3,17 @@ class SessionsController < ApplicationController
     session[:user_id]=params[:id]
     session[:username]=params[:username]
     redirect_to '/desigual#index', notice: "successful login via telegram"
-    # user = User.find_by(email: login_params[:email])
-    # if user&.authenticate(login_params[:password])
-    #   session[:user_id] = user.id
-    #   redirect_to '/dashboard'
-    # else
-    #   flash[:login_errors] = ['invalid credentianls']
-    #   redirect_to '/'
-    # end
+  end
+
+  def login
+    user = User.find_by(email: login_params[:email])
+    if user&.authenticate(login_params[:password])
+      session[:user_id] = user.id
+      redirect_to '/desigual'
+    else
+      flash[:login_errors] = ['invalid credentianls']
+      redirect_to '/'
+    end
   end
 
   def destroy

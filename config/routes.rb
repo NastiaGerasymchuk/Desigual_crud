@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # root to: 'desigual#index'
   get '/' => 'users#index'
   get '/posts'=>'posts#index'
-  # post '/sessions' => 'sessions#create'
+  post '/sessions/login' => 'sessions#login'
   post '/users' => 'users#create'
   get '/dashboard' => 'clothers#index'
   post "home/group_message", to: "home#group_message"

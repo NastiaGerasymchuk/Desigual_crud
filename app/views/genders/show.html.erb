@@ -1,4 +1,7 @@
 <div>
+  <% if session[:user_id].present? %>
+    <%= link_to "Go to main Gender page",'/genders' %>
+  <% end %>
   <% if @gender.persisted? %>
   <strong>Gender not found</strong>
     <%else %>

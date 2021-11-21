@@ -1,4 +1,7 @@
 <div class="title-container">
+  <% if session[:user_id].present? %>
+    <%= link_to "Go to main page",'/desigual' %>
+  <% end %>
   <h1 style="color:blueviolet; font-weight: bold">Clothers</h1>
   <p><%= link_to "New Clother",new_clother_path, class: 'btn btn-blue' %></p>
   <p>Clothers count: <span style="color: red"><%=Clother.count_by_sql("select count(*) from clothers") %></span></p>

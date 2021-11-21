@@ -1,3 +1,6 @@
+<% if session[:user_id].present? %>
+  <%= link_to "Go to main page",'/desigual' %>
+<% end %>
 <p id="notice"><%= notice %></p>
 
 <%= render @post %>

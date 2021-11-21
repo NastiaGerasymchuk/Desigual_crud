@@ -1,17 +1,6 @@
-<!--<p id="notice"><%#= notice %></p>-->
-<!--<h1>Posts</h1>-->
-<!--<p>Post count: <%#= Post.count_by_sql("select count(*) from posts") %></p>-->
-<%# @posts.each { |post| %>
-<!--  <div>-->
-<!--    <strong>Title</strong>-->
-    <%#=  post.title  %>
-<!--  </div>-->
-<!--  <div>-->
-<!--    <strong>Description</strong>-->
-    <%#=  post.description  %>
-<!--  </div>-->
-<%# } %>
-<%#= link_to "New post", new_post_path %>
+<% if session[:user_id].present? %>
+  <%= link_to "Go to main page",'/desigual' %>
+<% end %>
 <p id="notice"><%= notice %></p>
 
 <h1>Post</h1>

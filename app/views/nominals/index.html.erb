@@ -1,4 +1,7 @@
 <div>
+  <% if session[:user_id].present? %>
+    <%= link_to "Go to main page",'/desigual' %>
+  <% end %>
   <h1>Nominals</h1>
   <% @nominals.each { |nominal| %>
     <div>

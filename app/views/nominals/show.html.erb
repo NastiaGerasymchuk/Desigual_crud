@@ -1,4 +1,7 @@
 <div>
+  <% if session[:user_id].present? %>
+    <%= link_to "Go to main Nominal page",'/nominals' %>
+  <% end %>
   <%if @nominal.nil? %>
   <strong>Nominal not found</strong>
     <%else %>

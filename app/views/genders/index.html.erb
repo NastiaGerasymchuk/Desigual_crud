@@ -11,6 +11,9 @@
 <html>
 <body>
 <div class="container">
+  <% if session[:user_id].present? %>
+    <%= link_to "Go to main page",'/desigual' %>
+  <% end %>
   <h3>GENDERS LIST</h3>
   <p>Genders count: <%=Gender.count_by_sql("select count(*) from genders") %></p>
   <div>

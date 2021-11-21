@@ -1,3 +1,6 @@
+<% if session[:user_id].present? %>
+  <%= link_to "Go to main Clother page",'/clothers' %>
+<% end %>
 <% if @clother.nil? # or whatever method you use to determine
 
 %>

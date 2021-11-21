@@ -1,5 +1,7 @@
 <div class="container">
-
+  <% if session[:user_id].present? %>
+    <%= link_to "Show Gender","/genders/#{@gender.id}" %>
+  <% end %>
   <%= form_for @gender, url: {action: :update} do |f| %>
 
     <h3>Add a Gender</h3>
